@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/zadanie1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/index.html">Laboratorium 3</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+
+    <div class="container top-buffer">
+      <!-- Example row of columns -->
+      <div class="row top-buffer">
+        <div class="col-sm-3">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="row toolbox_item">
+                <div class="col-sm-6">
+                  Kolor pędzla
+                </div>
+                <div class="col-sm-6">
+                  <input
+                    type="color"
+                    value="#000000"
+                    id="colorpicker_pen"
+                    class="form-control colorpicker"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row toolbox_item">
+                <div class="col-sm-6">
+                  Kolor tła
+                </div>
+                <div class="col-sm-6">
+                  <input
+                    type="color"
+                    value="#ffffff"
+                    id="colorpicker_bg"
+                    class="form-control colorpicker"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row toolbox_item">
+                <div class="col-sm-6">
+                  Rozmiar narzędzia
+                </div>
+                <div class="col-sm-6">
+                  <input
+                    type="number"
+                    min="1"
+                    max="50"
+                    value="3"
+                    class="form-control"
+                    id="input_tool_size"
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="list-group-item">
+              <div class="row toolbox_item">
+                <div class="col-sm-12">
+                  Narzędzia
+                </div>
+              </div>
+              <div class="row toolbox_item">
+                <div id="toolbox_button_wrapper">
+                  <button
+                    type="button"
+                    class="btn btn-default"
+                    id="button_pen"
+                  >
+                    <span class="glyphicon glyphicon-pencil"></span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row toolbox_item">
+                <div class="col-sm-12">
+                  Wymiary płótna
+                </div>
+              </div>
+              <div class="row toolbox_item">
+                <div class="col-sm-6">
+                  Szerokość
+                </div>
+                <div class="col-sm-6">
+                  <input
+                    type="number"
+                    min="100"
+                    max="800"
+                    value="600"
+                    class="form-control"
+                    id="input_width"
+                  />
+                </div>
+              </div>
+              <div class="row toolbox_item">
+                <div class="col-sm-6">
+                  Wysokość
+                </div>
+                <div class="col-sm-6">
+                  <input
+                    type="number"
+                    min="100"
+                    max="800"
+                    value="400"
+                    class="form-control"
+                    id="input_height"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row toolbox_item">
+                <div class="col-sm-12">
+                  <button
+                    type="button"
+                    class="btn btn-default btn-block"
+                    id="button_clear"
+                  >
+                    Wyczyść płótno
+                  </button>
+                </div>
+              </div>
+              <div class="row toolbox_item">
+                <div class="col-sm-6">
+                  <button
+                    type="button"
+                    class="btn btn-default btn-block"
+                    id="button_save"
+                  >
+                    Zapisz
+                  </button>
+                </div>
+                <div class="col-sm-6">
+                  <button
+                    type="button"
+                    class="btn btn-default btn-block"
+                    id="button_load"
+                  >
+                    Wczytaj
+                  </button>
+                </div>
+              </div>
+              <div class="row toolbox_item">
+                <div class="col-sm-12">
+                  <button
+                    type="button"
+                    class="btn btn-default btn-block"
+                    id="button_clear_local_storage"
+                  >
+                    Usuń zapisane płótno
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-sm-9">
+          <div id="canvas_wrapper">
+            <canvas id="drawing_canvas"> </canvas>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <footer>
+        <p>&copy; Maja Bojarska 2020</p>
+      </footer>
+    </div>
+    <!-- /container -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'
+        );
+    </script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/zadanie1.js"></script>
+  </body>
+</html>

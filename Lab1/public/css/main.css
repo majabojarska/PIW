@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.img-container {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  border: 5px;
+  display:block;
+  margin:auto;
+}
+
+.img-in-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}

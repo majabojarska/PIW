@@ -1,0 +1,6 @@
+.list-group-overflow-scroll {
+  height: 45vh;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}

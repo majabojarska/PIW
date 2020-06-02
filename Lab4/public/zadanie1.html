@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/zadanie1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/index.html">Laboratorium 4</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+
+    <div class="container top-buffer">
+      <!-- Example row of columns -->
+      <div class="row top-buffer">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Zastosowane wzory</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  Rozkład normalny
+                  <img
+                    src="img/norm_dist_formula.png"
+                    class="img-responsive"
+                    alt=""
+                  />
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 img-responsive">
+                  Rozkład wykładniczy
+                  <img
+                    src="img/exp_dist_formula.png"
+                    class="img-responsive"
+                    alt=""
+                  />
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 img-responsive">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      Wartość x jest losowana w przedziale &lt;0;1.0&rpar;
+                      <br />
+                      (rozkład równomierny).
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      Aby zwolnić generowanie, zwiększ &lambda;.<br/>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <h3>
+                        <a href="https://www.desmos.com/calculator/wtuarrradu"
+                          >Desmos - wykres funkcji</a
+                        >
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="bottom-container">
+        <!-- Parameters -->
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Parametry</h3>
+            </div>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Kolejka klientów</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pojemność</td>
+                  <td>
+                    <input
+                      class="form-control"
+                      id="input-queue-capacity"
+                      value="5"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+
+              <thead>
+                <tr>
+                  <th>Rozkład normalny (czas obsługi)</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Średnia (&mu;)</td>
+                  <td>
+                    <input
+                      class="form-control"
+                      id="input-normal-dist-mean"
+                      value="0.5"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Odchylenie standardowe (&delta;)</td>
+                  <td>
+                    <input
+                      class="form-control"
+                      id="input-normal-dist-stddev"
+                      value="0.3"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+
+              <thead>
+                <tr>
+                  <th>Rozkład wykładniczy (czas generowania)</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lambda (&lambda;)</td>
+                  <td>
+                    <input
+                      class="form-control"
+                      id="input-exp-dist-lambda"
+                      value="0.2"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Queue -->
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Kolejka</div>
+            <!-- <div class="panel-body">
+              <p>Text goes here...</p>
+            </div> -->
+
+            <div
+              class="list-group list-group-overflow-scroll"
+              id="client-list-group"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Clients + Clerks -->
+
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Urzędnicy</h3>
+            </div>
+
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Obsługiwany klient</th>
+                  <th>Urzędnik</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="current_client_clerk_a"></td>
+                  <td>Urzędnik A</td>
+                </tr>
+                <tr>
+                  <td id="current_client_clerk_b"></td>
+                  <td>Urzędnik B</td>
+                </tr>
+                <tr>
+                  <td id="current_client_clerk_c"></td>
+                  <td>Urzędnik C</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Status</h3>
+            </div>
+
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Dana</th>
+                  <th>Wartość</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Liczba wszystkich klientów</td>
+                  <td id="status-client-count-total"></td>
+                </tr>
+                <tr>
+                  <td>Liczba przyjętych klientów</td>
+                  <td id="status-client-count-accepted"></td>
+                </tr>
+                <tr>
+                  <td>Liczba odrzuconych klientów</td>
+                  <td id="status-client-count-rejected"></td>
+                </tr>
+                <tr>
+                  <td>Liczba obsłużonych klientów</td>
+                  <td id="status-client-count-handled"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <footer>
+        <p>&copy; Maja Bojarska 2020</p>
+      </footer>
+    </div>
+    <!-- /container -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'
+        );
+    </script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <script type="module" src="js/events.js"></script>
+    <script type="module" src="js/clerk.js"></script>
+    <script type="module" src="js/client_generator.js"></script>
+    <script type="module" src="js/client_queue.js"></script>
+
+    <script type="module" src="js/zadanie1.js"></script>
+  </body>
+</html>

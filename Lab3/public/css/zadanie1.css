@@ -1,0 +1,24 @@
+.colorButtons {
+    display: block;
+    margin: 20px 0;
+}
+
+canvas {
+    cursor: crosshair;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.toolbox_item {
+    margin-top: 5px;
+}
+
+.colorpicker {
+    background: transparent;
+}
+
+#toolbox_button_wrapper {
+    margin: 10px 10px 10px 10px;
+    width: 90%;
+    margin: 0 auto;
+}

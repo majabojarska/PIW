@@ -1,0 +1,34 @@
+.top-buffer {
+  margin-top: 20px;
+}
+
+.info-top-padding {
+  margin-top: 7px;
+}
+
+.bold-red {
+  color: red;
+  font-weight: bold;
+}
+
+.bold-green {
+  color: red;
+  font-weight: bold;
+}
+
+.hidden-fade {
+  opacity: 0;
+  transition: opacity 250ms linear;
+}
+
+.img-container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+#animal{
+  height: fit-content;
+  width: fit-content;
+}

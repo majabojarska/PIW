@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/index.html">Laboratorium 2</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row top-buffer">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Kalkulator pierwiastków równania kwadratowego</h3>
+          </div>
+          <div class="panel-body">
+            Wprowadź współczynniki równania w postaci <span style="font-family:serif;"><b>ax<sup>2</sup>+bx+c=0</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <form action="javascript:void(0);">
+            <div class="form-group">
+              <label for="firstname">Wartość współczynnika a</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input class="form-control" id="coefficient_a" />
+                </div>
+                <div class="col-sm-6" id="coefficient_a_info">
+                  <p class="info-top-padding"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="lastname">Wartość współczynnika b</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input class="form-control" id="coefficient_b" />
+                </div>
+                <div class="col-sm-6" id="coefficient_b_info">
+                  <p class="info-top-padding"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="lastname">Wartość współczynnika c</label>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input class="form-control" id="coefficient_c" />
+                </div>
+                <div class="col-sm-6" id="coefficient_c_info">
+                  <p class="info-top-padding"></p>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-lg btn-success"
+              id="btn-submit"
+            >
+              Oblicz
+            </button>
+          </form>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel hidden-fade" id="panel_info">
+            <div class="panel-heading">
+              <h3 class="panel-title"></h3>
+            </div>
+            <div class="panel-body"></div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <footer>
+        <p>&copy; Maja Bojarska 2020</p>
+      </footer>
+    </div>
+    <!-- /container -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'
+        );
+    </script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/zadanie2.js"></script>
+  </body>
+</html>

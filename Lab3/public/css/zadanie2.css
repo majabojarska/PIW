@@ -1,0 +1,36 @@
+canvas {
+  border: 1px solid black;
+  /* background-color: #404040; */
+  border-radius: 5px;
+  height: 400px;
+  width: 800px;
+}
+
+#canvas_wrapper_container {
+  width: 100%;
+  text-align: center;
+}
+
+#canvas_wrapper {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.scoreboard {
+  text-align: center;
+  font-size: 40px;
+}
+
+.control-help {
+  text-align: center;
+  padding: 11px;
+  font-size: 16px;
+}
+
+.panel-title {
+  text-align: center;
+}
+
+.panel-body {
+  text-align: center;
+}
